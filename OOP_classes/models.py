@@ -4,6 +4,7 @@ import os
 
 load_dotenv()
 api_key = os.getenv('DEEPSEEK_API')
+
 class LLMConfig:
     def __init__(self, model: str, temperature: float, max_tokens: int, 
                  api_key: str, timeout: int = None, max_retries: int = 2):
