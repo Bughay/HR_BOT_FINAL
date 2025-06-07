@@ -1,7 +1,6 @@
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough, RunnableLambda
-from OOP_classes.models import llm
 from OOP_classes.config import q_chain_prompt_1,q_chain_prompt_2,q_chain_prompt_3,q_chain_prompt_4
 
 class InterviewGenerator:
