@@ -35,7 +35,7 @@ class Extraction:
     
 
     
-
+## This one is NON THINKINg,
 class GenerateQuestions:
     def __init__(self,extracted_data,jobreqs,llm):
         self.extracted_data = extracted_data
@@ -51,17 +51,14 @@ class GenerateQuestions:
         Returns:
             str: Formatted interview questions
         """
-        # System prompt
         system_prompt = GENERATE_QUESTIONS_SYSTEM_PROMPT
         
-        # Create the prompt template with THREE messages now
         prompt = ChatPromptTemplate.from_messages([
             ("system", system_prompt),
             ("human", "Job Requirements:\n{requirements}"), 
             ("human", "Candidate Background:\n{input}")  
         ])
         
-        # Create and invoke the chain
         chain = prompt | self.llm
         response = chain.invoke({
             "requirements": self.jobreqs,

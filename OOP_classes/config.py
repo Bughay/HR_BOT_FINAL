@@ -1,7 +1,12 @@
-DATABASE_URL = "sqlite:///hr.db"
+DATABASE_URL = 'database.db'
 
-THINKING = False
+file_path_resume = 'pdf/mark_resume.pdf'
+file_path_job_reqs = 'pdf/requirements.pdf'
 
+
+##this is for future, to add encapsulation which will allow to switch from different databases (e.g choose to save in sql or mongodb)
+THINKING = True
+WHICH_DATABASE = 'sqlite3'
 
 GENERATE_QUESTIONS_SYSTEM_PROMPT = """You are an interview question generator. 
         Create exactly:
@@ -65,5 +70,6 @@ q_chain_prompt_4 = """
         Evaluated Questions:
         {output_3}
         """
+
 
 
